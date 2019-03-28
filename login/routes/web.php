@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/usuario', function(){
+	return view('user');
+})->name('user');
+
+Route::get('/produtos','ProductController@index')->name('list.product');
+
+Route::get('/categorias','CategoryController@index')->name('list.category');
